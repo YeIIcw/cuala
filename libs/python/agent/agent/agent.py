@@ -603,6 +603,7 @@ class ComputerAgent:
         }
         await self._on_run_start(run_kwargs, old_items)
 
+        # agent stops when no tools is called
         while new_items[-1].get("role") != "assistant" if new_items else True:
             # Lifecycle hook: Check if we should continue based on callbacks (e.g., budget manager)
             should_continue = await self._on_run_continue(run_kwargs, old_items, new_items)

@@ -66,7 +66,7 @@ class MCPComputerAgent(MCPAgent):
         environment: str = "linux",
         **kwargs: Any,
     ) -> None:
-        self.allowed_tools = allowed_tools or ["openai_computer"]
+        self.allowed_tools = allowed_tools or ["openai_computer", "bash_script_tool", "python_script_tool"]
         super().__init__(**kwargs)
 
         if model is None:

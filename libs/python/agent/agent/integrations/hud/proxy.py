@@ -218,7 +218,7 @@ class ProxyOperatorAgent(OperatorAgent):
         **kwargs: Any,
     ) -> None:
         model = model or "computer-use-preview"
-        allowed_tools = allowed_tools or ["openai_computer"]
+        allowed_tools = allowed_tools or ["openai_computer", "bash_script_tool", "python_script_tool"]
 
         computer_shim = {
             'screenshot': lambda: Image.new('RGB', (computer_settings.OPENAI_COMPUTER_WIDTH, computer_settings.OPENAI_COMPUTER_HEIGHT)),

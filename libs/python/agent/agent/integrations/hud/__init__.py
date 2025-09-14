@@ -70,7 +70,7 @@ async def run_single_task(
 
         agent = MCPComputerAgent(
             model=model or "computer-use-preview",
-            allowed_tools=allowed_tools or ["openai_computer"],
+            allowed_tools=allowed_tools or ["openai_computer", "bash_script_tool", "python_script_tool"],
             # === ComputerAgent kwargs passthrough ===
             tools=tools,
             custom_loop=custom_loop,
@@ -116,6 +116,7 @@ async def run_full_dataset(
     use_prompt_caching: bool | None = False,
     max_trajectory_budget: float | dict | None = None,
     telemetry_enabled: bool | None = True,
+    custom_system_prompt: str | None,
 ) -> list[Any]:
     """Run evaluation across the entire dataset using hud.datasets.run_dataset."""
 
@@ -163,6 +164,7 @@ async def run_full_dataset(
         metadata={"dataset": dataset_name},
         max_steps=max_steps,
         auto_respond=True,
+        custom_system_prompt=custom_system_prompt
     )
 
 

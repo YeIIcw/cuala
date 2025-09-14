@@ -56,7 +56,7 @@ test = [
 respect-source-order = true
 
 [tool.pdm.resolution.overrides]
-hud-python = "0.4.12"
+hud-python = "0.4.26"
 
 [tool.black]
 line-length = 100
