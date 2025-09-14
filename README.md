@@ -29,7 +29,7 @@ I customized the agent across three layers:
 
 **Future work**: building **custom agent loops** (`@register_agent`) for more structured task families.
 
-P.S. also made response agent allowing submissions instead of constant prompting agent to continue ʕ•ᴥ•ʔ!
+P.S. also made response agent allowing response calls instead of constantly prompting agent to continue ʕ•ᴥ•ʔ!
 ---
 
 ### 🧪 HUD Benchmark Results
